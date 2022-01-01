@@ -12,7 +12,7 @@ def index():
 @app.route('/form', methods =['POST'])
 def submit_page():
     result = submit_to_jira(request.form.get('pid'),request.form.get('ttitle'),request.form.get('tdesc'))
-    if result is "existing_issue":
+    if result == "existing_issue":
         condition = "The same title exist, please change the title and create an issue again"
     else:
         condition = "Issue has been created and stored to DB successfully"
@@ -21,7 +21,7 @@ def submit_page():
 
 def submit_to_jira(pid, title, description):
     print("connecitng jira")
-    jira_instance = JIRA(basic_auth=('savankumarbhupendrabhai@gmail.com','1aMBrlGyj9fV4E9iADu78BCC'),options={"server":"https://savankumarbhupendrabhai.atlassian.net/"})
+    jira_instance = JIRA(basic_auth=('savankumarbhupendrabhai@gmail.com','FRkhLd2HKcZsLzlXH9tG2C47'),options={"server":"https://savankumarbhupendrabhai.atlassian.net/"})
 
     print("checking if title already exist or not")
     list_of_titles = []
