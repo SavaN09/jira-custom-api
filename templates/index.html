@@ -14,11 +14,13 @@
     <h1>Jira Ticket Submit!</h1>
     <form action="/form", method='post'>
         <label for="fname">Project ID</label><br>
-        <input type="text" id="fname" name="pid" value="IOT"><br>
+        <input type="text" id="fname" name="pid" value="IOT"><br><br>
         <label for="lname">Ticket Title</label><br>
-        <input type="text" id="lname" name="ttitle" ><br>
+        <input type="text" id="lname" name="ttitle" ><br><br>
         <label for="Description">Ticket Description: </label><br>
-        <textarea name="tdesc" id="desc" cols="30" rows="5"></textarea><br>
+        <textarea name="tdesc" id="desc" cols="30" rows="5"></textarea><br><br>
+        <label for="fname">Jira Access Token for the respecitve Project</label><br>
+        <input type="text" id="atoken" name="atoken"><br><br>
 
         <input type="submit" value="Submit">
         <h6>{{ condition }}</h6>
